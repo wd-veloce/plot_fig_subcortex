@@ -14,7 +14,7 @@ demo_output = fullfile('demo_file', 'demo_HCP_group_pFG_striatum.png');
 %       this project includes slanCM project. 
 %       For its detailed usage, please see: https://github.com/slandarer/slanColor
 addpath(fullfile('dependencies', 'slanCM'));
-colormap = slanCM(1, 256); % Colormap Viridis.
+color_map = slanCM(1, 256); % Colormap Viridis.
 
 % Scales
 min_scale = -1.5e-4;
@@ -34,5 +34,5 @@ max_scale = 1e-4;
 striatum_label =  [11, 12, 13, 26, 50, 51, 52, 58];
 
 % Generating the figure file would be time consuming, please wait.
-plot_fig_subcortex(demo_file, demo_output, colormap, min_scale, max_scale, striatum_label);
+plot_fig_subcortex(demo_file, demo_output, color_map, min_scale, max_scale, striatum_label);
 

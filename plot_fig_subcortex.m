@@ -1,4 +1,4 @@
-function plot_fig_subcortex(file_path, output_plot_path, colormap, min_scale, max_scale, structure_label)
+function plot_fig_subcortex(file_path, output_plot_path, color_map, min_scale, max_scale, structure_label)
 % Visualizing subcortex
 % Author: Xinyu Wu and Guoyuan Yang, BIT.
 % 
@@ -11,7 +11,7 @@ function plot_fig_subcortex(file_path, output_plot_path, colormap, min_scale, ma
 %       It depends on the project export_fig.
 %       about export_fig, please see: https://github.com/altmany/export_fig
 % 
-%     - colormap
+%     - color_map
 %       A n*3 matrix contains RGB color.
 %       This project has already contains project slanCM which contains numerous colormaps.
 %       about slanCM, please see: https://github.com/slandarer/slanColor
@@ -68,7 +68,7 @@ for i = 1: length(roi_pos)
         val = max_scale;
     end
         
-    color(i, :) = colormap(ceil((val-min_scale)/(max_scale-min_scale) * 256), :);
+    color(i, :) = color_map(ceil((val-min_scale)/(max_scale-min_scale) * 256), :);
 end
 
 figure;
