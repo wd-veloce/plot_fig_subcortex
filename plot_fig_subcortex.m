@@ -33,7 +33,7 @@ function plot_fig_subcortex(file_path, output_plot_path, color_map, min_scale, m
 %           striatum_label = [11, 12, 13, 26, 50, 51, 52, 58];
 %           all_subcortex_label = [8, 10, 11, 12, 13, 16, 17, 18, 26, 28, 47, 49, 50, 51, 52, 53, 54, 58, 60];
 
-[basepath, ~, ~] = fileparts(which("plot_fig_subcortex"));
+[basepath, ~, ~] = fileparts(which('plot_fig_subcortex'));
 
 addpath(fullfile(basepath, 'dependencies', 'export_fig'));
 
